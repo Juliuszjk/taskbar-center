@@ -52,19 +52,3 @@ Triggers: app windows shown or hidden, layout events from Explorer's taskbar
 windows, Explorer restarts (`TaskbarCreated`), display and setting changes.
 Each trigger is followed by checks at 60, 310 and 1010 ms so button grow and
 shrink animations are caught.
-
-## Test checklist
-
-1. Run `TaskbarCenter.exe --debug`. The icons jump to the middle of the screen.
-2. Open and close a few apps. The icons stay centered.
-3. Open several windows of one app, pin and unpin an icon, drag an icon.
-4. Restart Explorer (Task Manager → Windows Explorer → Restart). The icons are
-   centered again within a few seconds.
-5. Change the resolution and the scaling (Settings → Display).
-6. Turn the search box on and off (right-click the taskbar → Search).
-7. Check Task Manager: a few MB of memory, 0% CPU at rest.
-8. Run `--stop`. The icons return to the left.
-9. Run `--install`, sign out and back in. The icons are centered. Run
-   `--uninstall` afterwards.
-10. Several monitors: repeat steps 2 and 5, and connect or disconnect a
-    monitor while it runs.
